@@ -2,14 +2,15 @@
   "rewrites": [
     {
       "source": "/",
-      "destination": "/B-Zone-Politie/index.html"
+      "destination": "/Kasy/index.html"
     }
   ],
   "redirects": [
     {
       "source": "/(.*)",
-      "destination": "/B-Zone-Politie/index.html",
+      "destination": "/Kasy/index.html",
       "permanent": true
     }
   ]
+
 }
