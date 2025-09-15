@@ -1,18 +1,23 @@
 <!DOCTYPE html>
 <html lang="ro">
 <head>
-  <link rel="icon" type="image/png" href="favicon.png">
-  <link rel="shortcut icon" href="favicon.png" type="image/png">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>K4SY - Linktree</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Pacifico&display=swap" rel="stylesheet">
+
+  <!-- Favicon -->
+  <link rel="icon" href="favicon.png" type="image/png">
+  <link rel="shortcut icon" href="favicon.png" type="image/png">
+
+  <!-- Fonturi -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;600&family=Pacifico&display=swap" rel="stylesheet">
+
   <style>
     body {
       margin: 0;
       padding: 0;
-      font-family: 'Poppins', sans-serif;
-      font-variant-numeric: tabular-nums; /* cifre la aceeași înălțime */
+      font-family: 'Roboto Mono', monospace; /* font monospaced și frumos */
+      font-size: 1rem;
       background: linear-gradient(135deg, #ffdde1, #ee9ca7);
       display: flex;
       justify-content: center;
@@ -20,6 +25,7 @@
       min-height: 100vh;
       overflow: hidden;
     }
+
     .background-bubbles span {
       position: absolute;
       width: 40px;
@@ -28,23 +34,17 @@
       border-radius: 50%;
       animation: float 20s linear infinite;
     }
-    .background-bubbles span:nth-child(1) {
-      top: 10%; left: 15%; animation-duration: 18s; width: 60px; height: 60px;
-    }
-    .background-bubbles span:nth-child(2) {
-      top: 30%; left: 70%; animation-duration: 22s;
-    }
-    .background-bubbles span:nth-child(3) {
-      top: 60%; left: 25%; animation-duration: 25s;
-    }
-    .background-bubbles span:nth-child(4) {
-      top: 80%; left: 80%; animation-duration: 20s;
-    }
+    .background-bubbles span:nth-child(1) { top: 10%; left: 15%; animation-duration: 18s; width: 60px; height: 60px; }
+    .background-bubbles span:nth-child(2) { top: 30%; left: 70%; animation-duration: 22s; }
+    .background-bubbles span:nth-child(3) { top: 60%; left: 25%; animation-duration: 25s; }
+    .background-bubbles span:nth-child(4) { top: 80%; left: 80%; animation-duration: 20s; }
+
     @keyframes float {
       0% { transform: translateY(0) scale(1); }
       50% { transform: translateY(-50px) scale(1.2); }
       100% { transform: translateY(0) scale(1); }
     }
+
     .container {
       background: rgba(255, 255, 255, 0.85);
       padding: 40px 30px;
@@ -57,12 +57,14 @@
       position: relative;
       z-index: 1;
     }
+
     h1 {
-      font-family: 'Pacifico', cursive;
+      font-family: 'Pacifico', cursive; /* titlu cursiv */
       font-size: 2.5rem;
       margin-bottom: 25px;
       color: #e91e63;
     }
+
     .btn {
       display: block;
       margin: 15px 0;
@@ -77,8 +79,9 @@
       box-shadow: 0 6px 15px rgba(0,0,0,0.1);
       position: relative;
       overflow: hidden;
-      font-variant-numeric: tabular-nums; /* cifre uniforme și aici */
+      font-family: 'Roboto Mono', monospace;
     }
+
     .btn::before {
       content: "";
       position: absolute;
@@ -88,32 +91,23 @@
       transform: skewX(-30deg);
       transition: 0.5s;
     }
-    .btn:hover::before {
-      left: 100%;
-    }
-    .btn.discord {
-      background: linear-gradient(45deg, #7289da, #5865F2);
-    }
-    .btn.youtube {
-      background: linear-gradient(45deg, #ff4e50, #ff0000);
-    }
-    .btn.donate {
-      background: linear-gradient(45deg, #ffb347, #ff8c42);
-    }
+    .btn:hover::before { left: 100%; }
+
+    .btn.discord { background: linear-gradient(45deg, #7289da, #5865F2); }
+    .btn.youtube { background: linear-gradient(45deg, #ff4e50, #ff0000); }
+    .btn.donate { background: linear-gradient(45deg, #ffb347, #ff8c42); }
   </style>
 </head>
+
 <body>
   <div class="background-bubbles">
-    <span></span>
-    <span></span>
-    <span></span>
-    <span></span>
+    <span></span><span></span><span></span><span></span>
   </div>
   <div class="container">
     <h1>K4SY</h1>
     <a href="https://www.tipeeestream.com/k4sy/donation" class="btn donate" target="_blank">💖 TipeeeStream</a>
     <a href="https://discord.com/invite/74TzmAzc64" class="btn discord" target="_blank">🎮 Discord FiveM</a>
-    <a href="https://www.youtube.com/@k4symusic/videos" class="btn youtube" target="_blank">🎵 YouTube </a>
+    <a href="https://www.youtube.com/@k4symusic/videos" class="btn youtube" target="_blank">🎵 YouTube</a>
   </div>
 </body>
 </html>
